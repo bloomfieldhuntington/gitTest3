@@ -1,4 +1,4 @@
-/* business_dashboard.css */
+/* business_solver.css */
 
 html,body{
     margin: 0;
@@ -9,12 +9,12 @@ body{
 }
 .container-dashboard{
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 250px 1fr 150px;
     grid-template-rows: 150px 1fr 50px;
     grid-template-areas: 
-    "aside header"
-    "aside main"
-    "footer footer";
+    "aside header header"
+    "aside main academy"
+    "footer footer footer";
     height: 100vh;
 }
 
@@ -22,26 +22,6 @@ body{
     grid-area: header;
     background-color: #ffffff;
     border-radius: 0 0 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-}
-.icon-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    height: 50px;
-    width: 50px;
-    border: 2px solid #999999;
-    border-radius: 10px;
-    transition: all .1s;
-}
-.icon-container:hover {
-    border: 2px solid #011f4b;
-}
-.icon-container:hover .st-icon{
-    color: #011f4b;
 }
 /* MAIN */
 .dashboard-main-content{
@@ -56,48 +36,6 @@ body{
 .placeholder{
     background-color: green;
     margin: 20px;
-}
-.title-container{
-    margin-left: 10px;
-    font-size: 12px;
-    color: #444444;
-}
-.title-icon-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    height: 60px;
-    width: 60px;
-}
-.budget-container{
-    color: white;
-    margin: 10px;
-}
-.deadline-container{
-    color: white;
-    margin: 10px;
-}
-.solvers-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background: linear-gradient(#589BEA, #0D4D96); */
-    /* background-color: #589BEA; */
-    border: 1px solid #0d4d96;
-    margin: 10px;
-    height: 40px;
-    border-radius: 10px;
-}
-.solvers{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3px;
-    height: 25px;
-    width: 25px;
-    border-radius: 12.5px;
-    border: 1px solid #0d4d96;
 }
 /* SIDENAV */
 .dashboard-sidenav{
@@ -115,7 +53,7 @@ body{
     border-radius: 35px;
 }
 .sidenav-logo{
-    width: 120px;
+    width: 140px;
     margin: 20px;
 }
 .sidenav-list{
@@ -134,6 +72,13 @@ body{
     margin: 15px;
     padding: 10px;
     cursor: pointer;
+    transition: all 0.2s;
+}
+.sidenav-list-item:hover{
+    border: 1px solid #ffffff;
+}
+.sidenav-list-item:hover .list-item-icon{
+    color: #ffffff;
 }
 .list-item-container{
     display: flex;
@@ -142,11 +87,13 @@ body{
 }
 .list-item-icon{
     margin-left: 10px;
+    color: rgba(255, 255, 255, 0.8);
 }
 .list-item-title{
     width: 100%;
     text-align: left;
     margin-left: 25px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Profile Area */
@@ -169,6 +116,11 @@ body{
     border-radius: 10px;
     background-color: gray;
 }
+/* ACADEMY */
+.academy{
+    background-color: green;
+}
+
 /* FOOTER */
 .footer{
     grid-area: footer;
